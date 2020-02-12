@@ -31,7 +31,7 @@ typedef struct gdt_entry {
     u8  base_24_31;
 } __attribute__((__packed__, aligned (8))) gdt_entry;
 
-extern gdt_entry gdt[];
+extern gdt_entry gdt[3];
 extern gdt_descriptor GDT_DESC;
 
 #endif

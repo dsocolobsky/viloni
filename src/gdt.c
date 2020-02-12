@@ -1,6 +1,6 @@
 #include "gdt.h"
 
-gdt_entry gdt[30] = {
+gdt_entry gdt[3] = {
     [GDT_DESC_NULL] = (gdt_entry) {
         (u16)   0x0000, /* limit[0:15]  */
         (u16)   0x0000, /* base[0:15]   */
@@ -18,7 +18,6 @@ gdt_entry gdt[30] = {
         (u8)    0x00,   /* db           */
         (u8)    0x00,   /* g            */
         (u8)    0x00,   /* base[31:24]  */
-
     },
 
     [GDT_DESC_CODE] = (gdt_entry) {

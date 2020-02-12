@@ -46,7 +46,9 @@ _start:
 	jne .cls
     
     ; load GDT
+    xchg bx, bx
     lgdt [GDT_DESC]
+    xchg bx, bx
 
 
     ; load Paging

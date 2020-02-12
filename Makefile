@@ -42,7 +42,7 @@ $(ISO): build/ iso/boot/viloni.elf
 
 $(KERNEL): $(KERNEL_OBJ)
 	@echo 'Linking kernel'
-	$(CC) -T scripts/linker.ld -o $@ $(KERNEL_OBJ) $(LDFLAGS) -n -nostdlib -lgcc -fno-pie -no-pie
+	$(CC) -T scripts/linker.ld -o $@ $(KERNEL_OBJ) $(LDFLAGS) -n -nostdlib -lgcc -fno-pie -no-pie -Wl,-Map=output.map
 	objcopy --only-keep-debug $(KERNEL) build/viloni.sym
 	objcopy --strip-debug $(KERNEL)
 	@grub-file --is-x86-multiboot $@
