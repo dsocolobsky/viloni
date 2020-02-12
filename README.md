@@ -1,2 +1,2 @@
 # viloni
-Simple amd64 kernel
+Viloni is a simple amd64 kernel written in C
