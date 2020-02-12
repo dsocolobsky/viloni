@@ -10,7 +10,7 @@ CFLAGS := -ffreestanding -mno-red-zone -Iinclude -m64 -std=gnu11 -fno-pie -no-pi
 CFLAGS := -Wall -O0 -g -ggdb
 CFLAGS += -mno-sse -mno-mmx -mno-sse2 -mno-sse3 -mno-ssse3 -mno-sse4 -mno-sse4.1 -mno-sse4.2 -mno-avx -mno-sse4a
 
-KERNEL_OBJ := src/boot.asm.o src/kernel.asm.o src/gdt.c.o
+KERNEL_OBJ := src/boot.asm.o src/gdt.c.o
 
 .PHONY: all clean bochs qemu run
 

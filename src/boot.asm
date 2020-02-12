@@ -1,4 +1,3 @@
-extern kmain
 extern GDT_DESC
 
 ; Multiboot header
@@ -34,7 +33,6 @@ _start:
     ; Set up stack
     mov esp, stack_top
 
-
     ; Clear screen
     %define VGABUF 0xB8000
     ; Clear screen
@@ -52,7 +50,9 @@ _start:
 
 
     ; load Paging
-    ;call kmain
+
+
+    ; Call kmain
 
     ; Ciclar infinitamente
     cli
